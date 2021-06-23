@@ -73,7 +73,7 @@ class ViewController extends Controller
         $tableSettings = new Settings();
         $tableSettings::upsert($data, array_keys($data));
 
-        return redirect()->route('manage');
+        return redirect()->route('manage')->with('success','Settings successfully saved');
     }
 
     private function getAllSettings()
