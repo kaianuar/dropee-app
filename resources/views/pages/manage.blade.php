@@ -4,6 +4,13 @@
 <div class="container">
     <div class="row">
         <span>
+        @if(Session::has('success'))
+            <div class="alert alert-success" id="alert">
+                <strong>Success:</strong> {{Session::get('success')}}
+            </div>  
+        @endif
+        </span>
+        <span>
             <a href="{{ route('home') }}">Return To Home Page</a>
         </span>
     </div>
